@@ -37,7 +37,7 @@ pub mod basic_escrow {
         require!(escrow.authority == ctx.accounts.authority.key(), EscrowError::Unauthorized);
     
         // Transfer tokens from escrow token account to user's token account
-        // IMPORTANT: Fix the PDA signer seeds - they should match the seeds used to create the account
+        
         let authority_key = ctx.accounts.authority.key();
         let mint_key = ctx.accounts.mint.key();
         
